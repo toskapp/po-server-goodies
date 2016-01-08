@@ -761,11 +761,11 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         script.unban("smute", src, tar, commandData);
         return;
     }
-	if (command == "warn") {
-		normalbot.sendAll("" + sys.name(src) + " has warned " +commandData + " for breaking rules! [Channel: " + sys.channel(channel) + "]");
-		normalbot.sendAll("" + sys.name(src) + " warned " +commandData + ".", staffchannel);
-		return;
-	}
+    if (command == "warn") {
+    	normalbot.sendAll("" + sys.name(src) + " has warned " +commandData + " for breaking rules! [Channel: " + sys.channel(channel) + "]");
+	normalbot.sendAll("" + sys.name(src) + " warned " +commandData + ".", staffchannel);
+	return;
+    }
     return "no command";
 };
 exports.help = 
