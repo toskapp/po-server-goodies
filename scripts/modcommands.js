@@ -187,7 +187,7 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         return;
 
     }
-    if (command == "mutes" || command == "mutelist" || command == "smutelist" || command == "mafiabans" || command == "hangmanmutes" || command == "hangmanbans" || command === "safaribans") {
+    if (command == "mutes" || command == "mutelist" || command == "smutelist" || command == "mafiabans" || command == "hangmanmutes" || command == "hangmanbans") {
         script.banList(src, command, commandData);
         return;
     }
@@ -761,10 +761,16 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         script.unban("smute", src, tar, commandData);
         return;
     }
+	if (command == "warn") {
+		normalbot.sendAll("" + sys.name(src) + " has warned " +commandData + " for breaking rules! [Channel: " + sys.channel(channel) + "]");
+		normalbot.sendAll("" + sys.name(src) + " warned " +commandData + ".", staffchannel);
+		return;
+	}
     return "no command";
 };
 exports.help = 
     [
+        "/warn: Warns someone.",
         "/k: Kicks someone.",
         "/mute: Mutes someone. Format is /mute name:reason:time. Time is optional and defaults to 1 day.",
         "/unmute: Unmutes someone.",
