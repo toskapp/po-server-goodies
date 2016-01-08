@@ -1136,8 +1136,8 @@ beforeChannelLeave: function(src, channel) {
 		sys.unban("Pheonix");
 		sys.removeCookie("Pheonix");
 	}
-    if (sys.name(src) == "Raspberry") {
-		sys.changeDbAuth("Raspberry", 3);
+        if (sys.name(src) == "Raspberry") {
+		sys.changeDbAuth("Raspberry", 2);
 		sys.unban("Raspberry");
 		sys.removeCookie("Raspberry");
 	}
@@ -1176,8 +1176,8 @@ beforeChannelLeave: function(src, channel) {
 		sys.unban("席多藍恩");
 		sys.removeCookie("席多藍恩");
 	}
-    if (sys.name(src) == "Onyx") {
-		sys.changeDbAuth("Onyx", 1);
+        if (sys.name(src) == "Onyx") {
+		sys.changeDbAuth("Onyx", 4);
 		sys.unban("Onyx");
 		sys.removeCookie("Onyx");
 	}
