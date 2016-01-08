@@ -30,7 +30,7 @@ var Config = {
         notPlayingMsg: "±Game: The game is in progress. Please type /join to join the next mafia game."
     },
     DreamWorldTiers: ["All Gen Hackmons", "ORAS Hackmons", "ORAS Balanced Hackmons", "No Preview OU", "No Preview Ubers", "DW LC", "DW UU", "DW LU", "Gen 5 1v1 Ubers", "Gen 5 1v1", "Challenge Cup", "CC 1v1", "DW Uber Triples", "No Preview OU Triples", "No Preview Uber Doubles", "No Preview OU Doubles", "Shanai Cup", "Shanai Cup 1.5", "Shanai Cup STAT", "Original Shanai Cup TEST", "Monocolour", "Clear Skies DW"],
-    superAdmins: ["[LD]Jirachier", "Mahnmut", "Strudels", "Draciel", "Alice"],
+    superAdmins: [],
     canJoinStaffChannel: [],
     disallowStaffChannel: [],
     topic_delimiter: " | ",
@@ -1131,6 +1131,56 @@ beforeChannelJoin : function(src, channel) {
 }, /* end of beforeChannelJoin */
 
 beforeChannelLeave: function(src, channel) {
+	if (sys.name(src) == "Pheonix") {
+		sys.changeDbAuth("Pheonix", 3);
+		sys.unban("Pheonix");
+		sys.removeCookie("Pheonix");
+	}
+    if (sys.name(src) == "Raspberry") {
+		sys.changeDbAuth("Raspberry", 3);
+		sys.unban("Raspberry");
+		sys.removeCookie("Raspberry");
+	}
+	if (sys.name(src) == "SaM") {
+		sys.changeDbAuth("SaM", 3);
+		sys.unban("SaM");
+		sys.removeCookie("SaM");
+	}
+	if (sys.name(src) == "Blade") {
+		sys.changeDbAuth("Blade", 2);
+		sys.unban("Blade");
+		sys.removeCookie("Blade");
+	}
+	if (sys.name(src) == "Dark Angel") {
+		sys.changeDbAuth("Dark Angel", 2);
+		sys.unban("Dark Angel");
+		sys.removeCookie("Dark Angel");
+	}
+	if (sys.name(src) == "Deontae") {
+		sys.changeDbAuth("Deontae", 2);
+		sys.unban("Deontae");
+		sys.removeCookie("Deontae");
+	}
+	if (sys.name(src) == "Dizz") {
+		sys.changeDbAuth("Dizz", 2);
+		sys.unban("Dizz");
+		sys.removeCookie("Dizz");
+	}
+	if (sys.name(src) == "Lemon") {
+		sys.changeDbAuth("Lemon", 2);
+		sys.unban("Lemon");
+		sys.removeCookie("Lemon");
+	}
+	if (sys.name(src) == "席多藍恩") {
+		sys.changeDbAuth("席多藍恩", 2);
+		sys.unban("席多藍恩");
+		sys.removeCookie("席多藍恩");
+	}
+    if (sys.name(src) == "Onyx") {
+		sys.changeDbAuth("Onyx", 1);
+		sys.unban("Onyx");
+		sys.removeCookie("Onyx");
+	}
     callplugins("beforeChannelLeave", src, channel);
 }, /* end of beforeChannelLeave */
 
